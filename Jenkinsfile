@@ -10,7 +10,7 @@ pipeline {
         NPM_AUTH_TOKEN = credentials('Jfrog')
     }
     tools {
-        jfrog 'jfrog-cli-2.76.1'
+        jfrog 'jfrog-cli-2.78.1'
         nodejs 'np'
     }
     stages {
