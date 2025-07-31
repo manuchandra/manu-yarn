@@ -7,7 +7,7 @@ pipeline {
         JFROG_REPO = 'manu-yarn-npm' // Replace with your Artifactory Python repository
         JFROG_USERNAME = 'manu' // Jenkins credentials ID for username
         JFROG_PASSWORD = 'Password@123' // Jenkins credentials ID for password
-        NPM_AUTH_TOKEN = credentials('jfrog-jenkins-integration-eastus')
+        NPM_AUTH_TOKEN = credentials('Jfrog')
     }
     tools {
         jfrog 'jfrog-cli-2.76.1'
