@@ -16,6 +16,8 @@ pipeline {
     stages {
         stage('Install dependencies') {
             steps {
+                sh 'npm install -g yarn@^2.4.0'
+                sh 'yarn --version'
                 sh 'yarn install --immutable'
             }
         }
