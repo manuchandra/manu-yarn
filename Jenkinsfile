@@ -11,6 +11,7 @@ pipeline {
     }
     tools {
         jfrog 'jfrog-cli-2.78.1'
+        nodejs 'np'
     }
     stages {
         stage('Install dependencies') {
