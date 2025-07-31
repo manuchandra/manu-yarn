@@ -1,5 +1,3 @@
-@Library('utils@jfrog-test') _
-
 pipeline {
     agent any
     environment {
