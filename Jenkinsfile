@@ -33,7 +33,7 @@ pipeline {
                         sh '''
                         git config --global credential.helper '!f() { echo "username=${JFROG_USERNAME}"; echo "password=${JFROG_PASSWORD}"; }; f'
                         git config user.name "Jenkins CI"
-                        git checkout npm-yarn-sample
+                        git checkout main
                         '''
                         jfrog.withNpmCredentials('dev') {
                             sh '''
