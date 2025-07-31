@@ -14,7 +14,8 @@ pipeline {
         JFROG_PASSWORD = 'Password@123' // Jenkins credentials ID for password
     }
     tools { 
-        jfrog 'jfrog-cli-2.76.1'    
+        jfrog 'jfrog-cli-2.76.1'
+        nodejs 'np'
     }
 
   environment {
