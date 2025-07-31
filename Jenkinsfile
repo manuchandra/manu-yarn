@@ -29,7 +29,7 @@ pipeline {
         stage('Publish to Artifactory') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: "githubuser", usernameVariable: 'JFROG_USERNAME', passwordVariable: 'JFROG_PASSWORD')]) {
+                    withCredentials([usernamePassword(credentialsId: "Jfrog", usernameVariable: 'JFROG_USERNAME', passwordVariable: 'JFROG_PASSWORD')]) {
                         sh '''
                         git config --global credential.helper '!f() { echo "username=${JFROG_USERNAME}"; echo "password=${JFROG_PASSWORD}"; }; f'
                         git config user.name "Jenkins CI"
