@@ -16,7 +16,7 @@ pipeline {
     stages {
         stage('Install dependencies') {
             steps {
-                sh 'npm install --global yarn'
+                sh 'npm install -g yarn@4.9.2'
                 sh 'yarn --version'
                 sh 'yarn install --immutable'
             }
