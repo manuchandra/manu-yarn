@@ -9,6 +9,6 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "src/**/*" // Tells tsc to compile all files in the src directory
+    "src/*" // Tells tsc to compile all files in the src directory
   ]
 }
