@@ -45,6 +45,7 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: "Jfrog", usernameVariable: 'JFROG_USERNAME', passwordVariable: 'JFROG_PASSWORD')]) {
                         sh '''
                             npm install -g yarn@berry 
+                            yarn set version berry 
                             git config --global credential.helper '!f() { echo "username=${JFROG_USERNAME}"; echo "password=${JFROG_PASSWORD}"; }; f'
                             git config user.name "Jenkins CI"
                             git checkout main
