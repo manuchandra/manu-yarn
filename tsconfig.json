@@ -1,12 +1,14 @@
-stage('Typescript build') {
-    steps {
-        // Ensure all dependencies are installed
-        sh 'yarn install --immutable'
-        
-        // Generate a tsconfig.json file if one doesn't exist
-        sh 'tsc --init'
-        
-        // Run the build command
-        sh 'yarn build'
-    }
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "outDir": "./dist",  // Output directory for compiled JavaScript
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src/**/*" // Tells tsc to compile all files in the src directory
+  ]
 }
