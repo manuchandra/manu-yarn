@@ -14,6 +14,7 @@ pipeline {
         stage('Setup Environment and Dependencies') {
             steps {
                 script {
+                    dir('/var/jenkins_home/workspace/manu-yarn') {
                     
                     sh '''
                         ls -la
@@ -27,7 +28,7 @@ pipeline {
                         # Install project dependencies
                         yarn install
                     '''
-                    
+                    }
                 }
             }
         }
