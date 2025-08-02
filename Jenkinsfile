@@ -32,7 +32,7 @@ pipeline {
         }
         stage('Typescript Build') {
             steps {
-                #sh 'yarn build'
+                sh 'yarn build'
             }
         }
         stage('Publish to Artifactory') {
