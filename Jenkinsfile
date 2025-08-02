@@ -17,10 +17,13 @@ pipeline {
                     sh '''
                         rm -rf ~/.yarn
                         rm -rf ~/.yarn-cache
-                        npm install -g yarn
-                        yarn cache clean
-                        yarn --version
-                        yarn install --verbose
+                        # Install Yarn v2 (Berry) using npm
+                        npm install -g yarn@berry
+                        yarn --version # Check Yarn version
+                        # Initialize Yarn if needed (this will create a .yarnrc.yml file)
+                        yarn set version berry
+                        # Install project dependencies
+                        yarn install
                     '''
                 }
             }
