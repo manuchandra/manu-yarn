@@ -44,8 +44,8 @@ pipeline {
                             git config user.name "Jenkins CI"
                             git checkout main
                             git pull origin main
-                            yarn lerna version -y --conventional-commits
-                            yarn lerna publish from-git -y
+                            #yarn lerna version -y --conventional-commits
+                            #yarn lerna publish from-git -y
                             jf c add --insecure-tls true --url ''' + JFROG_URL + ''' --user ''' + JFROG_USERNAME + ''' --password ''' + JFROG_PASSWORD + ''' --interactive=false
                             jf yarn-config --repo-resolve ''' + JFROG_REPO + '''
                             jf yarn install --build-name=my-yarn-build --build-number=1
