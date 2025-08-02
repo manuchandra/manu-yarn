@@ -1,0 +1,50 @@
+{
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "description": "A brief description of your project",
+  "main": "index.js",  // Define the main entry point for your application
+  "scripts": {
+    "build": "tsc", // Assuming you are using TypeScript
+    "test": "jest", // If you're using Jest for testing
+    "start": "node dist/index.js" // Or whatever file your entry point is
+  },
+  "keywords": [
+    "yarn",
+    "example",
+    "package"
+  ],
+  "author": "Your Name",
+  "license": "ISC",  // You can specify your license here
+  "dependencies": {
+    "express": "^4.17.1", // Example dependencies
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "jest": "^27.4.5",
+    "@types/node": "^16.9.1",
+    "@types/express": "^4.17.13"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/your-repo.git" // URL to your repository
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 12
+    },
+    "rules": {
+      // Custom ESLint rules can go here
+    }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
+}
