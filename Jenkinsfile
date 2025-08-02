@@ -18,7 +18,7 @@ pipeline {
                         rm -rf ~/.yarn
                         rm -rf ~/.yarn-cache
                         # Install Yarn v2 (Berry) using npm
-                        npm install -g yarn@berry
+                        npm install -g yarnpkg
                         yarn --version # Check Yarn version
                         # Initialize Yarn if needed (this will create a .yarnrc.yml file)
                         yarn set version berry
