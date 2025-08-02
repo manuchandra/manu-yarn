@@ -14,7 +14,7 @@ pipeline {
         stage('Setup Environment and Dependencies') {
             steps {
                 script {
-                    dir('path/to/your/project') {
+                    {
                     sh '''
                         ls -la
                         rm -rf ~/.yarn
