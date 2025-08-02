@@ -20,7 +20,10 @@ pipeline {
                         ls -la
                         pwd
                         # Install Yarn v2 (Berry) using npm
-                        npm install -g yarnpkg
+                        npm uninstall -g yarn 
+                        npm uninstall -g yarnpkg
+                        #npm install -g yarnpkg
+                        npm install -g yarn@berry 
                         yarn --version # Check Yarn version
                         # Initialize Yarn if needed (this will create a .yarnrc.yml file)
                         # Install project dependencies
@@ -40,6 +43,7 @@ pipeline {
                 script {
                     withCredentials([usernamePassword(credentialsId: "Jfrog", usernameVariable: 'JFROG_USERNAME', passwordVariable: 'JFROG_PASSWORD')]) {
                         sh '''
+                            npm install -g yarn@berry 
                             git config --global credential.helper '!f() { echo "username=${JFROG_USERNAME}"; echo "password=${JFROG_PASSWORD}"; }; f'
                             git config user.name "Jenkins CI"
                             git checkout main
