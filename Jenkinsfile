@@ -25,7 +25,6 @@ pipeline {
                     sh '''
                         # Install a specific Node.js version if not available
                         # You may need to adjust this command based on your agent OS
-                        npm install -g node@20.14.0
 
                         # Manually delete old Yarn installations and cache to prevent conflicts
                         rm -rf ~/.yarn
