@@ -24,7 +24,7 @@ pipeline {
                         yarn --version # Check Yarn version
                         # Initialize Yarn if needed (this will create a .yarnrc.yml file)
                         # Install project dependencies
-                        yarn install --ignore-scripts
+                        yarn install --focus
                     '''
                     }
                 }
