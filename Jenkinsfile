@@ -37,7 +37,7 @@ pipeline {
                         yarn --version
                         
                         # Install project dependencies
-                        yarn install --immutable
+                        yarn install
                     '''
                 }
             }
