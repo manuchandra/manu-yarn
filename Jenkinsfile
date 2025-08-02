@@ -14,7 +14,9 @@ pipeline {
         stage('Setup Environment and Dependencies') {
             steps {
                 script {
+                    dir('path/to/your/project') {
                     sh '''
+                        ls -la
                         rm -rf ~/.yarn
                         rm -rf ~/.yarn-cache
                         # Install Yarn v2 (Berry) using npm
@@ -24,6 +26,7 @@ pipeline {
                         # Install project dependencies
                         yarn install
                     '''
+                    }
                 }
             }
         }
