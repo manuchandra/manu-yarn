@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/your-repo.git" 
+    "url": "https://github.com/manuchandra/manu-yarn.git" 
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
@@ -39,7 +39,7 @@
       "ecmaVersion": 12
     },
     "rules": {
-      // Custom ESLint rules can go here
+      
     }
   },
   "browserslist": [
