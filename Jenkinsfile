@@ -16,6 +16,7 @@ pipeline {
     stages {
         stage('Install dependencies') {
             steps {
+                sh 'rm -f $NODEJS_HOME/bin/yarn' 
                 sh 'npm install -g yarnpkg'
                 sh 'yarn --version'
                 sh 'yarn install --immutable'
