@@ -16,9 +16,10 @@ pipeline {
     stages {
         stage('Install dependencies') {
             steps {
+                sh 'rm -rf $NODEJS_HOME/lib/node_modules/yarnpkg'
+                sh 'rm -f $NODEJS_HOME/bin/yarn'
                 sh 'rm -rf ~/.yarn-cache'
                 sh 'yarn cache clean'
-                sh 'rm -f $NODEJS_HOME/bin/yarn' 
                 sh 'npm install -g yarnpkg'
                 sh 'yarn --version'
                 sh 'yarn install --immutable'
