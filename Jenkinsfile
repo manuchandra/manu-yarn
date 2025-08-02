@@ -12,6 +12,7 @@ pipeline {
     }
     tools {
         jfrog 'jfrog-cli-2.78.1'
+        nodejs 'np'
         // We will manage Node.js and Yarn installation directly
         // rather than relying on a pre-configured Jenkins tool.
     }
