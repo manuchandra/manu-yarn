@@ -24,7 +24,7 @@ pipeline {
                         yarn --version # Check Yarn version
                         # Initialize Yarn if needed (this will create a .yarnrc.yml file)
                         # Install project dependencies
-                        yarn install --verbose
+                        #yarn install --verbose
                     '''
                     }
                 }
@@ -32,7 +32,7 @@ pipeline {
         }
         stage('Typescript Build') {
             steps {
-                sh 'yarn build'
+                #sh 'yarn build'
             }
         }
         stage('Publish to Artifactory') {
