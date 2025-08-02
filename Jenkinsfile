@@ -19,8 +19,6 @@ pipeline {
                     sh '''
                         ls -la
                         pwd
-                        rm -rf ~/.yarn
-                        rm -rf ~/.yarn-cache
                         # Install Yarn v2 (Berry) using npm
                         npm install -g yarnpkg
                         yarn --version # Check Yarn version
