@@ -1,12 +1,12 @@
 {
-  "name": "your-project-name",
+  "name": "manu-yarn",
   "version": "1.0.0",
   "description": "A brief description of your project",
-  "main": "index.js",  // Define the main entry point for your application
+  "main": "index.js",  
   "scripts": {
-    "build": "tsc", // Assuming you are using TypeScript
-    "test": "jest", // If you're using Jest for testing
-    "start": "node dist/index.js" // Or whatever file your entry point is
+    "build": "tsc", 
+    "test": "jest", 
+    "start": "node dist/index.js" 
   },
   "keywords": [
     "yarn",
@@ -14,9 +14,9 @@
     "package"
   ],
   "author": "Your Name",
-  "license": "ISC",  // You can specify your license here
+  "license": "ISC", 
   "dependencies": {
-    "express": "^4.17.1", // Example dependencies
+    "express": "^4.17.1", 
     "lodash": "^4.17.21"
   },
   "devDependencies": {
@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/your-repo.git" // URL to your repository
+    "url": "https://github.com/yourusername/your-repo.git" 
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
