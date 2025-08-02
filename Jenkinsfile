@@ -24,6 +24,7 @@ pipeline {
                         npm uninstall -g yarnpkg
                         #npm install -g yarnpkg
                         npm install -g yarn@berry 
+                        yarn set version berry 
                         yarn --version # Check Yarn version
                         # Initialize Yarn if needed (this will create a .yarnrc.yml file)
                         # Install project dependencies
