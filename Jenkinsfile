@@ -14,7 +14,7 @@ pipeline {
         stage('Setup Environment and Dependencies') {
             steps {
                 script {
-                    {
+                    
                     sh '''
                         ls -la
                         rm -rf ~/.yarn
@@ -26,7 +26,7 @@ pipeline {
                         # Install project dependencies
                         yarn install
                     '''
-                    }
+                    
                 }
             }
         }
