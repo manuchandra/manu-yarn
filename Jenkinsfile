@@ -54,7 +54,7 @@ pipeline {
                             #yarn lerna publish from-git -y
                             jf c add --insecure-tls true --url ''' + JFROG_URL + ''' --user ''' + JFROG_USERNAME + ''' --password ''' + JFROG_PASSWORD + ''' --interactive=false
                             jf yarn-config --repo-resolve ''' + JFROG_REPO + '''
-                            jf yarn install --build-name=my-yarn-build --build-number=1
+                            JFROG_CLI_LOG_LEVEL=DEBUG jf yarn install --build-name=my-yarn-build --build-number=1
                             jf rt bce my-yarn-build 1
                             jf rt bp my-yarn-build 1
                         '''
